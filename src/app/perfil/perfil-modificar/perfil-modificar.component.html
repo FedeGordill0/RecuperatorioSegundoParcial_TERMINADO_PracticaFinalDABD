@@ -1,0 +1,38 @@
+<form [formGroup]="formulario">
+  <div>
+    <label for="inputNombre">Nombre</label>
+    <input required type="text" id="inputNombre" name="nombre" formControlName="nombre">
+    <div *ngIf="formulario.controls['nombre'].invalid && formulario.controls['nombre'].touched">
+      <p>El campo <strong>nombre</strong> NO puede ser nulo</p>
+    </div>
+  </div>
+  <br>
+  <div>
+    <label for="inputEmail">Email</label>
+    <input required type="text" id="inputEmail" name="email" formControlName="email">
+    <div *ngIf="formulario.controls['email'].invalid && formulario.controls['email'].touched">
+      <p>El campo <strong>email</strong> NO puede ser nulo</p>
+    </div>
+  </div>
+  <br>
+  <div>
+    <label for="inputTelefono">Teléfono</label>
+    <input required type="text" id="inputTelefono" name="telefono" formControlName="telefono">
+    <div *ngIf="formulario.controls['telefono'].invalid && formulario.controls['telefono'].touched">
+      <p>El campo <strong>telefono</strong> NO puede ser nulo</p>
+    </div>
+  </div>
+  <br>
+  <div>
+    <label for="inputDireccion">Dirección</label>
+    <input required type="text" id="inputDireccion" name="direccion" formControlName="direccion">
+    <div *ngIf="formulario.controls['direccion'].invalid && formulario.controls['direccion'].touched">
+      <p>El campo <strong>dirección</strong> NO puede ser nulo</p>
+    </div>
+  </div>
+  <br>
+  <div>
+    <button (click)="guardar()">Guardar</button>
+    <button (click)="cancelar()">Cancelar</button>
+  </div>
+</form>
